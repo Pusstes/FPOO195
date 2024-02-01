@@ -1,4 +1,3 @@
-numero = int(input('Ingresa un numero entero y positivo:'))
-for negativo in range(numero, 0):
-    negativo -= 1
-    print(numero  + ",")
+numero = int(input('Ingresa un numero entero y positivo: '))
+for i in range(numero, -1, -1):
+    print(i, end = ', ')

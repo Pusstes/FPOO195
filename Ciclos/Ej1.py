@@ -1,3 +1,5 @@
-numero = int(input('Ingresa un numero entero y positivo: '))
-impares = ""
-for i in range (1, numero + 1,2):
+num = int(input('Ingresa un numero entero positivo: '))
+
+for i  in range(1, num + 1):
+    if i % 2 != 0:
+        print(i, end=', ')
