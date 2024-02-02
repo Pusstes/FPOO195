@@ -3,11 +3,12 @@
 # IVA a aplicar, y devolver el total de la factura. Si se invoca la función
 # sin pasarle el porcentaje de IVA, deberá aplicar un 21%.
 
-def calcular_iva(monto, iva=21):
-    if iva == 21:
-         total_iva = monto * iva
-         total_monto = monto + (total_iva/100)
+def calcular_iva(monto, iva):
+    if iva == "":
+         total_iva = monto * .21
+         total_monto = monto + total_iva
     else:
+         iva = float(iva)
          total_iva = monto * iva
          total_monto = monto + (total_iva/100)
     
@@ -15,5 +16,5 @@ def calcular_iva(monto, iva=21):
    
 
 monto = float(input('Ingresa el monto de tu factura: '))
-iva = float(input('Ingresa el monto de IVA que te cobraran:'))
+iva = input('Ingresa el monto de IVA que te cobraran:')
 print(f"Tu factura sera de {calcular_iva(monto, iva)}")
