@@ -22,16 +22,16 @@ Arma = Armas()
 # atributos Spartan
 print("")
 print('===== Datos del Spartan ======')
-print(spartan.nombre)
-print(spartan.especie)
-print(spartan.altura)
+print(spartan.get_nombre())
+print(spartan.get_especie())
+print(spartan.get_altura())
 print("")
 
 # atributos nemesis 
 print('===== Datos del villano ======')
-print(nemesis.nombre)
-print(nemesis.especie)
-print(nemesis.altura)
+print(nemesis.get_nombre())
+print(nemesis.get_especie())
+print(nemesis.get_altura())
 print("")
 
 # Metodos del spartan
@@ -47,7 +47,7 @@ nemesis.lanzarGranada()
 print("")
 
 # Metodos del arma
-Arma.seleccionarArma(spartan.nombre)
+Arma.seleccionarArma(spartan.get_nombre())
 Arma.recargarArma(65)
 
 
