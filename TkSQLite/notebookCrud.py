@@ -2,6 +2,12 @@ from tkinter import *
 from tkinter import ttk
 import tkinter as tk
 import sqlite3
+from Controlador import *
+
+objControlador = Controlador()
+
+def ejecutarInsert():
+    objControlador.insertUsuario(var1.get(), var2.get(), var3.get())
 
 ventana = Tk()
 ventana.title("CRUD de Usuarios")
@@ -40,6 +46,10 @@ Entry(pestana1, textvariable=var2).pack()
 var3 = tk.StringVar()
 Label(pestana1, text="Contraseña:").pack()  
 Entry(pestana1, textvariable=var3).pack()
+
+boton = Button(pestana1, text="Guardar", bg="green", fg="white", command=ejecutarInsert)
+boton.pack()
+
 
     
 
