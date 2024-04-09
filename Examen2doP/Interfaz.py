@@ -4,17 +4,17 @@ from Persona import Persona
 
 def generar_matricula():
     nombre = entry_nombre.get()
-    apellido_paterno = entry_apellido_paterno.get()
-    apellido_materno = entry_apellido_materno.get()
+    apellido_paterno = entry_apellido_paterno.get().upper()
+    apellido_materno = entry_apellido_materno.get().upper()
     año_nacimiento = int(entry_año_nacimiento.get())
-    carrera = entry_carrera.get()
+    carrera = entry_carrera.get().upper()
 
     persona = Persona(nombre, apellido_paterno, apellido_materno, año_nacimiento, carrera)
     matricula = persona.matricula()
 
     messagebox.showinfo("Matrícula Generada", f"La matrícula generada es: {matricula}")
 
-# Crear la interfaz gráfica
+
 root = tk.Tk()
 root.title("Generador de Matrícula")
 
